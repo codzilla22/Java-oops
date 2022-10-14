@@ -1,4 +1,4 @@
-package oopLab1410;
+package oop1410;
 
 public class employee extends person{
 
