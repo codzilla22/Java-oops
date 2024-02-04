@@ -19,7 +19,7 @@ Java enforces certain constraints to maintain the integrity of OOP principles:
 1. **Single Inheritance:** A class can inherit from only one superclass to avoid ambiguity.
 2. **Abstraction:** Abstract classes and interfaces provide a level of abstraction, ensuring clear separation of concerns.
 
-## Applications of OOP in Java
+## Applications of Java OOPs
 
 ### Java OOP in Machine Learning
 
