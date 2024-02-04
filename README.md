@@ -76,12 +76,134 @@ public class DecisionTree {
         }
     }
 }
-
+```
 
 ### Java OOP in AI
 
+In AI applications, OOP facilitates building intelligent systems with modular components. Classes representing agents, environments, and decision-making processes enhance code organization.
+
+```java
+import java.util.Random;
+
+public class IntelligentAgent {
+
+    // Attributes or fields representing the internal state of the IntelligentAgent
+    private String agentName;
+    private int energyLevel;
+
+    // Constructor to initialize the IntelligentAgent
+    public IntelligentAgent(String agentName) {
+        this.agentName = agentName;
+        this.energyLevel = 100; // Starting energy level
+    }
+
+    // Method to perform an action based on the agent's intelligence
+    public void performAction() {
+        if (energyLevel > 0) {
+            // Implement the logic for intelligent decision-making or action
+            System.out.println(agentName + " is performing an intelligent action.");
+            // Consume energy for the action
+            consumeEnergy();
+        } else {
+            System.out.println(agentName + " is out of energy and cannot perform actions.");
+        }
+    }
+
+    // Method to recharge the energy of the IntelligentAgent
+    public void rechargeEnergy() {
+        // Implement the logic to recharge the energy
+        energyLevel = 100; // Full energy after recharge
+        System.out.println(agentName + "'s energy has been fully recharged.");
+    }
+
+    // Private method to simulate energy consumption
+    private void consumeEnergy() {
+        // Simulate energy consumption during an action
+        Random random = new Random();
+        int energyConsumed = random.nextInt(20) + 1; // Consume between 1 to 20 units of energy
+        energyLevel -= energyConsumed;
+        System.out.println(agentName + " has consumed " + energyConsumed + " units of energy.");
+    }
+
+    // Getters and setters for attributes (if needed)
+    public String getAgentName() {
+        return agentName;
+    }
+
+    public int getEnergyLevel() {
+        return energyLevel;
+    }
+
+    // Additional methods and functionalities can be added as needed
+}
+```
+
 ### Java OOP in Data Engineering
+
+For Data Engineering tasks, OOP promotes a well-organized approach. Classes can represent data pipelines, transformations, and connectors, making the codebase scalable and maintainable.
+
+```java
+import java.util.List;
+
+public class DataPipeline {
+
+    // Attributes or fields representing the internal state of the DataPipeline
+    private String pipelineName;
+    private List<DataProcessor> processors;
+
+    // Constructor to initialize the DataPipeline
+    public DataPipeline(String pipelineName, List<DataProcessor> processors) {
+        this.pipelineName = pipelineName;
+        this.processors = processors;
+    }
+
+    // Method to process data through the pipeline
+    public void process(List<Data> inputData) {
+        System.out.println("Processing data through the pipeline: " + pipelineName);
+
+        // Iterate through each processor in the pipeline
+        for (DataProcessor processor : processors) {
+            System.out.println("Applying processor: " + processor.getName());
+            inputData = processor.processData(inputData);
+        }
+
+        System.out.println("Data processing completed.");
+    }
+
+    // Inner class representing a data processor
+    public static class DataProcessor {
+        private String name;
+
+        public DataProcessor(String name) {
+            this.name = name;
+        }
+
+        // Method to process data
+        public List<Data> processData(List<Data> inputData) {
+            // Implement the logic to process data
+            // ...
+            return inputData; // Placeholder for demonstration
+        }
+
+        // Getter for processor name
+        public String getName() {
+            return name;
+        }
+    }
+
+    // Inner class representing the data that flows through the pipeline
+    public static class Data {
+        // Attributes or fields of data
+        // ...
+    }
+
+    // Additional methods and functionalities can be added as needed
+}
+```
+
+For more information and content follow on [Instagram](https://www.instagram.com/hamad_tariq001/) or send a connection request on [LinkedIn](https://www.linkedin.com/in/hammad-tariq-269623207/)
 
 ## Author
 
-[hamad-tariq](https://github.com/hamad-tariq)
+
+Visit portfolio at [hamad-tariq](https://github.com/hamad-tariq)
